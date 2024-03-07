@@ -8,7 +8,15 @@ async function populate() {
         const responseData = await response.json();
         var racks = JSON.parse(responseData);
 
+        racks.array.forEach(name => {
+            createNewRack(name)
+        });
+
     } catch (error) {
         console.error(error);
     }
+}
+
+async function createNewRack(name){
+    
 }

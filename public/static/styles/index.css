@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #111;
+
+    min-height: 100%;
+}
+
+#body-content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-content: normal;
+}
+
+#rack-list {
+    padding-bottom: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+}
+
+.rack {
+    height: 70vh;
+    width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    gap: 20px;
+
+    border: 8px double #FFFFFF;
+}
+
+.server {
+    position: relative;
+
+    height: 12%;
+    width: 100%;
+    background-color: gray;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+}
+
+.server .status-light {
+    margin-left: auto;
+    padding-right: 10%;
+}   
+
+.status-light .outer {
+    height: 55px;
+    width: 55px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    display: flex;           /* Use flexbox */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.status-light .inner { /* Make sure this matches your class name, corrected from 'innter' to 'inner' */
+    height: 27.5px;
+    width: 27.5px;
+    background-color: gray;
+    border-radius: 50%;
+    /* Remove 'display: table' and 'margin: auto auto' as they are not needed */
+}
+
+.server .server-vents {
+    padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: normal;
+    gap: 4px;
+
+}
+
+.server-vents .vent {
+    height: 15px;
+    width: 55px;
+    background-color: rgb(183, 179, 179);
+    border-radius: 25%;
+    display: inline-block;
+  }

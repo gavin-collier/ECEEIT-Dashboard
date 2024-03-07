@@ -7,6 +7,9 @@ const port = 3000
 
 const app = express();
 let reqPath = path.join(__dirname, '../public/');
+app.use(express.static(reqPath + '/static'))
+app.use(express.static(reqPath + '/views'))
+app.use(express.static(reqPath + '/scripts'))
 
 app.get('/', (req, res) => {
     res.sendFile(reqPath + "/views/index.html");
