@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.sendFile(reqPath + "/views/index.html");
 })
 
-app.use('/serverData', dataRoutes);
+app.use('/load', dataRoutes);
 
 app.listen(port, () => {
     console.log(`app listening on port ${port}`)

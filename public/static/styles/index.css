@@ -7,7 +7,7 @@ body {
     min-height: 100%;
 }
 
-#body-content{
+#body-content {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,11 +26,12 @@ body {
     justify-content: center;
     align-items: normal;
     align-content: normal;
+    gap: 20px;
 }
 
 .rack {
-    height: 70vh;
-    width: 20vw;
+    height: 700px;
+    width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -60,20 +61,24 @@ body {
 
 .server .status-light {
     margin-left: auto;
-    padding-right: 10%;
-}   
+    padding-right: 5%;
+}
 
 .status-light .outer {
     height: 55px;
     width: 55px;
     background-color: lightgreen;
     border-radius: 50%;
-    display: flex;           /* Use flexbox */
-    align-items: center;     /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
 }
 
-.status-light .inner { /* Make sure this matches your class name, corrected from 'innter' to 'inner' */
+.status-light .inner {
+    /* Make sure this matches your class name, corrected from 'innter' to 'inner' */
     height: 27.5px;
     width: 27.5px;
     background-color: gray;
@@ -100,4 +105,4 @@ body {
     background-color: rgb(183, 179, 179);
     border-radius: 25%;
     display: inline-block;
-  }
+}
