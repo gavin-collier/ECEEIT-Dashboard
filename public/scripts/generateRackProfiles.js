@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function (e) {
-    var rackListElement = document.getElementsByTagName('rack-list');
     populate();
 });
 
 async function populate() {
     var responseData;
     try {
-        const serverResponse = await fetch("/load/racks", { method: "POST", })
+        await fetch("/load/racks", { method: "POST", })
             .then((response) => response.json())
             .then((json) => responseData = json);
 
@@ -28,11 +27,9 @@ async function createNewRack(rack, rackCount) {
     newRack.setAttribute("id", "rack-" + rackCount)
     newRack.setAttribute("class", "rack");
 
-    var serverCount = 0;
-    console.log("Rack: " + Object.keys(rack));
-
     document.getElementById("rack-list").appendChild(newRack);
-
+    
+    var serverCount = 0;
     Object.keys(rack).forEach(server => {
         if (server != "name") {
             createNewServer(server, rackCount, serverCount);
@@ -43,7 +40,7 @@ async function createNewRack(rack, rackCount) {
 
 async function createNewServer(server, rackCount, serverCount) {
     var newServer = document.createElement("div");
-    newServer.setAttribute("id", "rack-" + rackCount + "-server-0" + serverCount);
+    newServer.setAttribute("id", "server-" + serverCount);
     newServer.setAttribute("class", "server");
     document.getElementById("rack-" + rackCount).appendChild(newServer);
 
@@ -60,10 +57,12 @@ async function createNewServer(server, rackCount, serverCount) {
 
     var newServerStatusParrent = document.createElement("div");
     newServerStatusParrent.setAttribute("class", "status-light");
+    newServerStatusParrent.setAttribute("id", "status-light");
     newServer.appendChild(newServerStatusParrent);
 
     var statusOutter = document.createElement("span");
-    statusOutter.setAttribute("class", "outer");
+    statusOutter.setAttribute("class", "outer-offline");
+    statusOutter.setAttribute("id", "status-" + rackCount + "-" + serverCount);
     newServerStatusParrent.appendChild(statusOutter);
 
     var statusInner = document.createElement("span");

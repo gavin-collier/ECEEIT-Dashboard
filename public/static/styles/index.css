@@ -64,7 +64,7 @@ body {
     padding-right: 5%;
 }
 
-.status-light .outer {
+.status-light .outer-online {
     height: 55px;
     width: 55px;
     background-color: lightgreen;
@@ -75,6 +75,32 @@ body {
     /* Center vertically */
     justify-content: center;
     /* Center horizontally */
+
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+    z-index: 1;
+}
+
+.status-light .outer-offline {
+    height: 55px;
+    width: 55px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
 }
 
 .status-light .inner {
@@ -84,6 +110,13 @@ body {
     background-color: gray;
     border-radius: 50%;
     /* Remove 'display: table' and 'margin: auto auto' as they are not needed */
+    z-index: 10;
+}
+
+@keyframes color {
+    to {
+        background-color: darkgray;
+    }
 }
 
 .server .server-vents {
