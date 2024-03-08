@@ -2,6 +2,7 @@ var express = require('express');
 var http = require("http");
 var path = require('path');
 const dataRoutes = require('./data-routs');
+const serverPing = require('./pingServers');
 
 const port = 3000
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/load', dataRoutes);
+app.use('/ping', serverPing);
 
 app.listen(port, () => {
     console.log(`app listening on port ${port}`)

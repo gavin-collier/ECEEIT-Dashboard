@@ -5,5 +5,26 @@
         "location": "TEST",
         "owner": "TEST",
         "OS": "TEST"
+    },
+    {
+        "hostname": "TEST SLOT 1",
+        "ip": "0.0.0.0",
+        "location": "TEST",
+        "owner": "TEST",
+        "OS": "TEST"
+    },
+    {
+        "hostname": "TEST SLOT 2",
+        "ip": "0.0.0.0",
+        "location": "TEST",
+        "owner": "TEST",
+        "OS": "TEST"
+    },
+    {
+        "hostname": "TEST 2",
+        "ip": "0.0.0.0",
+        "location": "TEST",
+        "owner": "TEST",
+        "OS": "TEST"
     }
 ]
