@@ -6,6 +6,7 @@ async function getStatusUpdate(){
     .then((response) => response.json())
     .then((json) => responseData = json);
 
+    await Promise.all(responseData);
     console.log(responseData);
     updateLightColor(responseData);
 
@@ -15,9 +16,8 @@ async function getStatusUpdate(){
 async function updateLightColor(racks){
     racks.forEach((rack, index) => {
         console.log("updating rack " + index);
-        var currentRack = document.getElementById("rack-" + index);
         Object.keys(rack).forEach((server, indexj) => {
-            if (server != "name") {
+            if (server != "name" && rack[server] != "empty") {
                 var statusLight = document.getElementById("status-" + index + "-" + indexj);
 
                 if (rack[server]){

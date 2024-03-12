@@ -1,12 +1,10 @@
 [
     {
-        "name": "TEST RACK",
-        "slot0": "TEST",
-        "slot1": "TEST SLOT 1",
-        "slot2": "TEST SLOT 2"
-    },
-    {
-        "name": "TEST RACK 2",
-        "slot0": "TEST 2"
+        "name": "N16",
+        "slot1": "empty",
+        "slot2": "empty",
+        "slot3": "en4192911rl.eng.asu.edu",
+        "slot0": "TEST SLOT 1",
+        "slot4": "TEST SLOT 2"
     }
 ]

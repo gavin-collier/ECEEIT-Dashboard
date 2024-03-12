@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECEEIT Server Dashbaord</title>
-    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/indexDark.css">
     <link rel="stylesheet" href="/styles/partials.css">
-    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
 </head>
 
 <body>
@@ -14,6 +14,16 @@
         <div id="rack-list">
         </div>
     </div>
+
+    <dialog>
+        <p id="dialog-hostname"></p>
+        <p id="dialog-ip"></p>
+        <p id="dialog-location"></p>
+        <p id="dialog-owner"></p>
+        <p id="dialog-os"></p>
+
+        <button autofocus>Close</button>
+    </dialog>
 
     <script src="generateRackProfiles.js"></script>
     <script src="statusLightManager.js"></script>

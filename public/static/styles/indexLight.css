@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: white;
+
+    min-height: 100%;
+}
+
+#body-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+    align-content: normal;
+}
+
+#rack-list {
+    padding-bottom: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+    gap: 20px;
+}
+
+.rack {
+    height: 700px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    gap: 20px;
+
+    border: 8px double black;
+}
+
+.server {
+    position: relative;
+
+    height: 12%;
+    width: 98%;
+    border: 2px dashed white;
+    background-color: gray;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: normal;
+}
+
+.empty-server {
+    position: relative;
+
+    height: 12%;
+    width: 98%;
+    border: 2px dashed gray;
+    background-color: white;
+}
+
+
+.serverItemBox {
+    flex-grow: 1;
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+}
+
+.serverNameBox {
+    margin-top: -5%;
+    margin-bottom: 0%;
+    flex-grow: 0;
+}
+
+.serverNameBox p {
+    padding-left: 5%;
+}
+
+.server .status-light {
+    padding-left: 7%;
+}
+
+.status-light .outer-online {
+    height: 55px;
+    width: 55px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+    z-index: 1;
+}
+
+.status-light .outer-offline {
+    height: 55px;
+    width: 55px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: color;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+}
+
+.status-light .inner {
+    height: 27.5px;
+    width: 27.5px;
+    background-color: gray;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+@keyframes color {
+    to {
+        background-color: darkgray;
+    }
+}
+
+.serverItemBox .server-vents {
+    padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: normal;
+    gap: 4px;
+
+}
+
+.server-vents .vent {
+    height: 15px;
+    width: 55px;
+    background-color: rgb(183, 179, 179);
+    border-radius: 25%;
+    display: inline-block;
+}
+
+dialog {
+    animation: fade-out 0.7s ease-out;
+}
+
+dialog[open] {
+    animation: fade-in 0.7s ease-out;
+}
+
+dialog[open]::backdrop {
+    animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
+}
+
+@keyframes backdrop-fade-in {
+    0% {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    100% {
+        background-color: rgb(0 0 0 / 25%);
+    }
+}
+
+body,
+button {
+    font-family: system-ui;
+}

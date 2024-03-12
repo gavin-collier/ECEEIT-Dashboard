@@ -19,7 +19,6 @@ router.post('/', async (req, res) => {
                     }
                     return Promise.resolve();
                 });
-                // Wait for all ping operations to complete for the current rack
                 await Promise.all(pingPromises);
             }
         }

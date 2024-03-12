@@ -48,8 +48,30 @@ body {
     position: relative;
 
     height: 12%;
-    width: 100%;
+    width: 98%;
+    border: 2px dashed white;
     background-color: gray;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: normal;
+}
+
+.empty-server {
+    position: relative;
+
+    height: 12%;
+    width: 98%;
+    border: 2px dashed gray;
+    background-color: rgb(0, 0, 0);
+}
+
+.serverItemBox {
+    flex-grow: 1;
+    margin-top: 5%;
 
     display: flex;
     flex-direction: row;
@@ -59,9 +81,18 @@ body {
     align-content: normal;
 }
 
+.serverNameBox {
+    margin-top: -5%;
+    margin-bottom: 0%;
+    flex-grow: 0;
+}
+
+.serverNameBox p {
+    padding-left: 5%;
+}
+
 .server .status-light {
-    margin-left: auto;
-    padding-right: 5%;
+    padding-left: 7%;
 }
 
 .status-light .outer-online {
@@ -70,14 +101,11 @@ body {
     background-color: lightgreen;
     border-radius: 50%;
     display: flex;
-    /* Use flexbox */
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
 
     animation-name: color;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease;
@@ -90,26 +118,21 @@ body {
     background-color: red;
     border-radius: 50%;
     display: flex;
-    /* Use flexbox */
     align-items: center;
-    /* Center vertically */
     justify-content: center;
-    /* Center horizontally */
 
     animation-name: color;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease;
 }
 
 .status-light .inner {
-    /* Make sure this matches your class name, corrected from 'innter' to 'inner' */
     height: 27.5px;
     width: 27.5px;
     background-color: gray;
     border-radius: 50%;
-    /* Remove 'display: table' and 'margin: auto auto' as they are not needed */
     z-index: 10;
 }
 
@@ -119,7 +142,7 @@ body {
     }
 }
 
-.server .server-vents {
+.serverItemBox .server-vents {
     padding-left: 5%;
 
     display: flex;
@@ -138,4 +161,61 @@ body {
     background-color: rgb(183, 179, 179);
     border-radius: 25%;
     display: inline-block;
+}
+
+dialog {
+    animation: fade-out 0.7s ease-out;
+}
+
+dialog[open] {
+    animation: fade-in 0.7s ease-out;
+}
+
+dialog[open]::backdrop {
+    animation: backdrop-fade-in 0.7s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
+}
+
+@keyframes backdrop-fade-in {
+    0% {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    100% {
+        background-color: rgb(0 0 0 / 25%);
+    }
+}
+
+body,
+button {
+    font-family: system-ui;
 }

@@ -1,10 +1,17 @@
 [
     {
-        "hostname": "TEST",
+        "hostname": "ERROR",
         "ip": "0.0.0.0",
-        "location": "TEST",
-        "owner": "TEST",
-        "OS": "TEST"
+        "location": "ERROR: CONTACT GAVIN",
+        "owner": "ERROR",
+        "OS": "N/A"
+    },
+    {
+        "hostname": "en4192911rl.eng.asu.edu",
+        "ip": "129.219.30.9",
+        "location": "N16",
+        "owner": "Britan",
+        "OS": "RHEL7"
     },
     {
         "hostname": "TEST SLOT 1",
