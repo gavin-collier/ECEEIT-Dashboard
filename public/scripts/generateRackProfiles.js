@@ -30,11 +30,18 @@ async function populate() {
 }
 
 async function createNewRack(rack, rackCount) {
+    var newRackWithName = document.createElement("div");
+    newRackWithName.setAttribute("class", "rack-with-name");
+    document.getElementById("rack-list").appendChild(newRackWithName);
+
+    var rackTitle = document.createElement("h4");
+    rackTitle.textContent = rack.name;
+    newRackWithName.appendChild(rackTitle);
+
     var newRack = document.createElement("div");
     newRack.setAttribute("id", "rack-" + rackCount)
     newRack.setAttribute("class", "rack");
-
-    document.getElementById("rack-list").appendChild(newRack);
+    newRackWithName.appendChild(newRack);
 
     var serverCount = 0;
     Object.keys(rack).forEach(server => {
