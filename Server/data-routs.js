@@ -7,17 +7,17 @@ router.post('/racks', (req, res) => {
 });
 
 router.post('/server', async (req, res) => {
-    var success = false;
-    serverList.map(server => {
+    var responseSent = false;
+
+    for (const server of serverList) {
         if (req.body.hostname == server.hostname) {
-            success = true;
+            responseSent = true;
             return res.send(JSON.stringify(server));
         }
-    });
+    }
 
-    if (!success){
-        return res.send(serverList.find(server =>
-            server.hostname === 'ERROR'));
+    if (!responseSent) {
+        return res.send(serverList.find(server => server.hostname === 'ERROR'));
     }
 });
 

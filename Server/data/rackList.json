@@ -1,8 +1,10 @@
 [
     {
         "name": "N3",
+        "slot2": "empty",
         "slot0": "eceesrv01.eas.asu.edu",
-        "slot1": "eceesrv02.eas.asu.edu"
+        "slot1": "eceesrv02.eas.asu.edu",
+        "slot3": "empty"
     },
     {
         "name": "N7",
@@ -10,7 +12,8 @@
         "slot1": "en4226588ul.eng.asu.edu",
         "slot2": "en4226597rl.eng.asu.edu",
         "slot3": "en4226598rl.eng.asu.edu",
-        "slot4": "en4226599rl.eng.asu.edu"
+        "slot4": "en4226599rl.eng.asu.edu",
+        "slot5": "empty"
     },
     {
         "name": "N8",
@@ -23,6 +26,10 @@
     },   
     {
         "name": "N10",
+        "slot1": "empty",
+        "slot2": "empty",
+        "slot3": "empty",
+        "slot4": "empty",
         "slot0": "en4226528ul.eng.asu.edu"
     },
     {
