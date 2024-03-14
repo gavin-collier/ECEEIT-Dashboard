@@ -45,26 +45,36 @@ async function createNewRack(rack, rackCount) {
 
     var serverCount = 0;
     Object.keys(rack).forEach(server => {
-        if (rack[server] == "empty"){
+        if (rack[server] == "empty") {
             createNewEmptySlot(server, rackCount, serverCount);
         }
         else if (server != "name") {
-            createNewServer(rack[server], rackCount, serverCount);
+            if (Object.keys(rack).length > 8) {
+                createNewServer(rack[server], rackCount, serverCount, true);
+
+            } else {
+                createNewServer(rack[server], rackCount, serverCount, false);
+            }
             serverCount++;
         }
     });
 }
 
-async function createNewEmptySlot(server, rackCount, serverCount){
+async function createNewEmptySlot(server, rackCount, serverCount) {
     var newServer = document.createElement("div");
     newServer.setAttribute("class", "empty-server");
     document.getElementById("rack-" + rackCount).appendChild(newServer);
 }
 
-async function createNewServer(server, rackCount, serverCount) {
+async function createNewServer(server, rackCount, serverCount, serverSmall) {
     var newServer = document.createElement("div");
     newServer.setAttribute("id", "server-" + serverCount);
-    newServer.setAttribute("class", "server");
+    if (serverSmall) {
+        newServer.setAttribute("class", "server-small");
+
+    } else {
+        newServer.setAttribute("class", "server");
+    }
     document.getElementById("rack-" + rackCount).appendChild(newServer);
 
     newServer.addEventListener('click', async function (event) {
@@ -99,7 +109,7 @@ async function createNewServer(server, rackCount, serverCount) {
         document.getElementById("dialog-hostname").innerHTML = "Hostname: " + responseDataServer.hostname;
         document.getElementById("dialog-ip").innerHTML = "IP: " + responseDataServer.ip;
         document.getElementById("dialog-location").innerHTML = "Location: " + responseDataServer.location;
-        document.getElementById("dialog-owner").innerHTML = "Lwner: " + responseDataServer.owner;
+        document.getElementById("dialog-owner").innerHTML = "Owner: " + responseDataServer.owner;
         document.getElementById("dialog-os").innerHTML = "OS: " + responseDataServer.OS;
 
         dialog.showModal();
@@ -115,16 +125,30 @@ async function createNewServer(server, rackCount, serverCount) {
 
     newServerNameBox.insertAdjacentHTML("afterbegin", "<p>" + server + "</p>")
 
-    for (let i = 0; i < 3; i++) {
-        var newServerVentsParrent = document.createElement("div");
-        newServerVentsParrent.setAttribute("class", "server-vents");
-        newServerItemBox.appendChild(newServerVentsParrent);
-        for (let j = 0; j < 3; j++) {
-            var newServerVents = document.createElement("span");
-            newServerVents.setAttribute("class", "vent");
-            newServerVentsParrent.appendChild(newServerVents);
+    if (serverSmall) {
+        for (let i = 0; i < 3; i++) {
+            var newServerVentsParrent = document.createElement("div");
+            newServerVentsParrent.setAttribute("class", "server-vents");
+            newServerItemBox.appendChild(newServerVentsParrent);
+            for (let j = 0; j < 1; j++) {
+                var newServerVents = document.createElement("span");
+                newServerVents.setAttribute("class", "vent");
+                newServerVentsParrent.appendChild(newServerVents);
+            }
+        }
+    } else {
+        for (let i = 0; i < 3; i++) {
+            var newServerVentsParrent = document.createElement("div");
+            newServerVentsParrent.setAttribute("class", "server-vents");
+            newServerItemBox.appendChild(newServerVentsParrent);
+            for (let j = 0; j < 3; j++) {
+                var newServerVents = document.createElement("span");
+                newServerVents.setAttribute("class", "vent");
+                newServerVentsParrent.appendChild(newServerVents);
+            }
         }
     }
+
 
     var newServerStatusParrent = document.createElement("div");
     newServerStatusParrent.setAttribute("class", "status-light");

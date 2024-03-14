@@ -8,7 +8,7 @@ body {
 }
 
 #body-content {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -22,7 +22,7 @@ body {
 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: normal;
     align-content: normal;
@@ -75,6 +75,24 @@ body {
     align-content: normal;
 }
 
+.server-small {
+    position: relative;
+
+    height: 8%;
+    width: 98%;
+    border: 2px dashed white;
+    background-color: gray;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: normal;
+}
+
 .empty-server {
     position: relative;
 
@@ -102,11 +120,23 @@ body {
     flex-grow: 0;
 }
 
+.server-small .serverNameBox {
+    margin-top: -11%;
+    margin-bottom: 0%;
+    flex-grow: 0;
+}
+
 .serverNameBox p {
     padding-left: 5%;
 }
 
 .server .status-light {
+    padding-left: 7%;
+}
+
+.server-small .status-light {
+    height: 45px;
+    width: 45px;
     padding-left: 7%;
 }
 
