@@ -1,10 +1,49 @@
 [
     {
+        "name": "N3",
+        "slot0": "eceesrv01.eas.asu.edu",
+        "slot1": "eceesrv02.eas.asu.edu"
+    },
+    {
+        "name": "N7",
+        "slot0": "en4226524ul.eng.asu.edu",
+        "slot1": "en4226588ul.eng.asu.edu",
+        "slot2": "en4226597rl.eng.asu.edu",
+        "slot3": "en4226598rl.eng.asu.edu",
+        "slot4": "en4226599rl.eng.asu.edu"
+    },
+    {
+        "name": "N8",
+        "slot0": "en4202626rl.eng.asu.edu",
+        "slot1": "en4202627rl.eng.asu.edu",
+        "slot2": "en4202675rl.eng.asu.edu",
+        "slot3": "en4202674rl.eng.asu.edu",
+        "slot4": "en6170659rl.eng.asu.edu",
+        "slot5": "en4202687rl.eng.asu.edu"
+    },   
+    {
+        "name": "N10",
+        "slot0": "en4226528ul.eng.asu.edu"
+    },
+    {
+        "name": "N11",
+        "slot0": "en4192908ul.eng.asu.edu",
+        "slot1": "en4192823ul.eng.asu.edu",
+        "slot2": "en4192851ul.eng.asu.edu",
+        "slot3": "en4226647ul.eng.asu.edu",
+        "slot4": "en4226648ul.eng.asu.edu",
+        "slot5": "en4192862ul.fulton.asu.edu",
+        "slot6": "en4192768rl.eng.asu.edu",
+        "slot7": "en4113074rl.eas.asu.edu",
+        "slot8": "en4192789rl.eng.asu.edu"
+    },
+    {
         "name": "N16",
         "slot1": "empty",
         "slot2": "empty",
         "slot3": "en4192911rl.eng.asu.edu",
-        "slot0": "TEST SLOT 1",
-        "slot4": "TEST SLOT 2"
+        "slot0": "en4192805ul.eng.asu.edu",
+        "slot4": "en4192763ul.eng.asu.edu",
+        "slot5": "en4192911rl.eng.asu.edu"
     }
 ]

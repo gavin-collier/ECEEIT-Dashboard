@@ -7,31 +7,206 @@
         "OS": "N/A"
     },
     {
+        "hostname": "TEST",
+        "ip": "TEST",
+        "location": "TEST",
+        "owner": "TEST",
+        "OS": "TEST"
+    },
+    {
         "hostname": "en4192911rl.eng.asu.edu",
         "ip": "129.219.30.9",
-        "location": "N16",
+        "location": "GWC 167 - N16",
         "owner": "Britan",
         "OS": "RHEL7"
     },
     {
-        "hostname": "TEST SLOT 1",
-        "ip": "0.0.0.0",
-        "location": "TEST",
-        "owner": "TEST",
-        "OS": "TEST"
+        "hostname": "en4192908ul.eng.asu.edu",
+        "ip": "129.219.250.180",
+        "location": "GWC 167 - N11",
+        "owner": "Ahmed Alkhateeb",
+        "OS": "Ubuntu 22.04"
     },
     {
-        "hostname": "TEST SLOT 2",
-        "ip": "0.0.0.0",
-        "location": "TEST",
-        "owner": "TEST",
-        "OS": "TEST"
+        "hostname": "en4192823ul.eng.asu.edu",
+        "ip": "129.219.250.188",
+        "location": "GWC 167 - N11",
+        "owner": "Andreas Spanias",
+        "OS": "Ubuntu 20.04"
     },
     {
-        "hostname": "TEST 2",
-        "ip": "0.0.0.0",
+        "hostname": "en4192851ul.eng.asu.edu",
+        "ip": "149.169.31.32",
+        "location": "GWC 167 - N11",
+        "owner": "Andreas Spanias",
+        "OS": "Ubuntu 20.04"
+    },
+    {
+        "hostname": "en4192763ul.eng.asu.edu",
+        "ip": "en4192763ul.eng.asu.edu",
+        "location": "GWC 167 - N16",
+        "owner": "Gautam Dasarathy",
+        "OS": "Ubuntu 18.04"
+    },
+    {
+        "hostname": "en4226524ul.eng.asu.edu",
+        "ip": "149.169.31.30",
+        "location": "GWC 167 - N7",
+        "owner": "Krishnendu Chakrabary",
+        "OS": "Ubuntu 22.04"
+    },
+    {
+        "hostname": "en4226588ul.eng.asu.edu ",
+        "ip": "149.169.30.39",
+        "location": "GWC 167 - N7",
+        "owner": "Leslie Hwang",
+        "OS": "Ubuntu 22.04"
+    },
+    {
+        "hostname": "en4192805ul.eng.asu.edu",
+        "ip": "149.169.30.7",
+        "location": "GWC 167 - N16",
+        "owner": "Nicolo Michelusi",
+        "OS": "Ubuntu 20.04"
+    },
+    {
+        "hostname": "en4226528ul.eng.asu.edu",
+        "ip": "129.219.30.32",
+        "location": "GWC 167 - N10",
+        "owner": "GWC 167 - N10",
+        "OS": "Ubuntu 20.04"
+    },
+    {
+        "hostname": "en4226647ul.eng.asu.edu",
+        "ip": "129.219.30.35",
+        "location": "GWC 167 - N11",
+        "owner": "Vijay Vittal",
+        "OS": "Ubuntu 22.04"
+    },
+    {
+        "hostname": "en4226648ul.eng.asu.edu",
+        "ip": "129.219.30.36",
+        "location": "GWC 167 - N11",
+        "owner": "Vijay Vittal",
+        "OS": "Ubuntu 22.04"
+    },
+    {
+        "hostname": "en4192862ul.fulton.asu.edu",
+        "ip": "129.219.30.28",
+        "location": "GWC 167 - N11",
+        "owner": "Yu Cao",
+        "OS": "Ubuntu 20.04"
+    },
+    {
+        "hostname": "en4192768rl.eng.asu.edu",
+        "ip": "129.219.30.29",
+        "location": "GWC 167 - N11",
+        "owner": "Arindam Sanyal",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4202626rl.eng.asu.edu",
+        "ip": "149.169.30.42",
+        "location": "GWC 167 - N8",
+        "owner": "Arindam Sanyal",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4202627rl.eng.asu.edu",
+        "ip": "149.169.30.43",
+        "location": "GWC 167 - N8",
+        "owner": "Arindam Sanyal",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4192911rl.eng.asu.edu",
+        "ip": "en4192911rl.eng.asu.edu",
+        "location": "GWC 167 - N16",
+        "owner": "Bertan Bakkaloglu",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4202675rl.eng.asu.edu",
+        "ip": "149.169.30.40",
+        "location": "GWC 167 - N8",
+        "owner": "149.169.30.40",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4113074rl.eas.asu.edu",
+        "ip": "192.168.80.33",
+        "location": "GWC 167 - N11",
+        "owner": "Ivan Sanchez Esqueda",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "eceesrv01.eas.asu.edu",
+        "ip": "149.169.31.38",
+        "location": "GWC 167 - N3",
+        "owner": "Jennifer Kitchen",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "eceesrv02.eas.asu.edu",
+        "ip": "149.169.31.39",
+        "location": "GWC 167 - N3",
+        "owner": "Jennifer Kitchen",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4226597rl.eng.asu.edu",
+        "ip": "149.16930.54",
+        "location": "GWC 167 - N7",
+        "owner": "Jiaqu Gu",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4226598rl.eng.asu.edu",
+        "ip": "149.16930.55",
+        "location": "GWC 167 - N7",
+        "owner": "Jiaqu Gu",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4226599rl.eng.asu.edu",
+        "ip": "149.169.30.50",
+        "location": "GWC 167 - N7",
+        "owner": "Krishnendu Chakrabary",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4202674rl.eng.asu.edu",
+        "ip": "149.169.30.41",
+        "location": "GWC 167 - N8",
+        "owner": "Matthew Marinella",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en6170659rl.eng.asu.edu",
+        "ip": "149.169.30.22",
+        "location": "GWC 167 - N8",
+        "owner": "Mike Bruns -Anna's Sag",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4202687rl.eng.asu.edu",
+        "ip": "129.219.30.13",
+        "location": "GWC 167 - N8",
+        "owner": "Sule Ozev",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "en4192789rl.eng.asu.edu",
+        "ip": "129.219.30.30",
+        "location": "GWC 167 - N11",
+        "owner": "Yu Cao",
+        "OS": "RHEL7"
+    },
+    {
+        "hostname": "TEST",
+        "ip": "TEST",
         "location": "TEST",
         "owner": "TEST",
-        "OS": "TEST"
+        "OS": "RHEL7"
     }
 ]
